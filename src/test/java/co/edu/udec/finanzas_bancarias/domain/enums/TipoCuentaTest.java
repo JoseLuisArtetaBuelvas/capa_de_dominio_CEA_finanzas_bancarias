@@ -5,13 +5,13 @@ import static org.assertj.core.api.Assertions.*;
 public class TipoCuentaTest {
 
     @Test
-    public void debeContenederValorAhorros(){
+    public void debeContenerValorAhorros(){
         var tipo = TipoCuenta.AHORRO;
         assertThat(tipo).isEqualTo(TipoCuenta.AHORRO);
     }
 
     @Test
-    public void debeContenederValorCorriente(){
+    public void debeContenerValorCorriente(){
         var tipo = TipoCuenta.CORRIENTE;
         assertThat(tipo).isEqualTo(TipoCuenta.CORRIENTE);
     }
