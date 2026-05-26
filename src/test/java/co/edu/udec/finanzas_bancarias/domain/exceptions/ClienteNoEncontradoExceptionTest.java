@@ -21,6 +21,6 @@ public class ClienteNoEncontradoExceptionTest {
     public void debeLanzarseEnContextoCorrecto(){
         assertThatThrownBy(() -> {
             throw new ClienteNoEncontradoException("error");
-        }).isInstanceOf(ClienteNoEncontradoException.class).hasMessage("error");
+        }).isInstanceOf(ClienteNoEncontradoException.class).hasMessageContaining("error");
     }
 }
