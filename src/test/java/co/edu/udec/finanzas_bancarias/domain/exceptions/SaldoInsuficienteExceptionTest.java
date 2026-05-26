@@ -18,7 +18,7 @@ public class SaldoInsuficienteExceptionTest {
     }
 
     @Test
-    public void debeLanzarseEnCointextoCorrecto(){
+    public void debeLanzarseEnContextoCorrecto(){
         assertThatThrownBy(()->{
             throw new SaldoInsuficienteException("error");
         }).isInstanceOf(SaldoInsuficienteException.class).hasMessageContaining("error");
