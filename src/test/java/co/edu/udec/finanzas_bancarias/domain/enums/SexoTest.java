@@ -17,6 +17,6 @@ public class SexoTest {
     }
 
     public void debeFallarConValorInexistente(){
-        assertThatThrownBy(()->TipoCuenta.valueOf(null)).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(()->Sexo.valueOf(null)).isInstanceOf(IllegalArgumentException.class);
     }
 }
