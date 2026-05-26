@@ -23,4 +23,5 @@ public class SaldoInsuficienteExceptionTest {
             throw new SaldoInsuficienteException("error");
         }).isInstanceOf(SaldoInsuficienteException.class).hasMessageContaining("error");
     }
+
 }
