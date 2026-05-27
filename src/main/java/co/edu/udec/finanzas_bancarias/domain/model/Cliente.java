@@ -6,7 +6,7 @@ import co.edu.udec.finanzas_bancarias.domain.valueobjects.Direccion;
 public class Cliente {
     private final CodigoCliente id_cliente;
     private String nombre;
-    private final Direccion direccion;
+    private Direccion direccion;
 
     public Cliente(CodigoCliente id_cliente, String nombre, Direccion direccion) {
         if(nombre == null || nombre.isEmpty()){
@@ -20,6 +20,21 @@ public class Cliente {
         this.nombre = nombre;
         this.direccion = direccion;
     }
+
+    public void actulizarNombre(String nuevoNombre){
+        if(nuevoNombre == null || nuevoNombre.isBlank()){
+            throw new IllegalArgumentException("El nombre es obligatorio");
+        }
+        this.nombre = nuevoNombre;
+    }
+
+    public void actualizarDireccion(Direccion nuevaDireccion){
+        if(nuevaDireccion == null){
+            throw new IllegalArgumentException("La direccion es obligatoria");
+        }
+        this.direccion = nuevaDireccion;
+    }
+
 
     public CodigoCliente getCodigoCliente() {return this.id_cliente;}
     public String getNombre() {return this.nombre;}
