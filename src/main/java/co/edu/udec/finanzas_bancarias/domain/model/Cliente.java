@@ -21,7 +21,7 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public void actulizarNombre(String nuevoNombre){
+    public void actualizarNombre(String nuevoNombre){
         if(nuevoNombre == null || nuevoNombre.isBlank()){
             throw new IllegalArgumentException("El nombre es obligatorio");
         }
