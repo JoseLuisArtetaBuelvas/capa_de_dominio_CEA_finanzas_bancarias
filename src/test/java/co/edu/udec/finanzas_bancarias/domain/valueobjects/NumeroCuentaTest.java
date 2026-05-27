@@ -12,11 +12,11 @@ public class NumeroCuentaTest {
 
     @Test
     public void debeFallarConValorNulo(){
-        assertThatThrownBy(()-> new NumeroCuenta(null)).isInstanceOf(IllegalArgumentException.class).hasMessageContaining(null);
+        assertThatThrownBy(()-> new NumeroCuenta(null)).isInstanceOf(IllegalArgumentException.class).hasMessageContaining("nulo");
     }
 
     @Test
     public void debeFallarConValorVacio(){
-        assertThatThrownBy(() -> new NumeroCuenta("")).isInstanceOf(NumeroCuenta.class).hasMessageContaining("vacío");
+        assertThatThrownBy(() -> new NumeroCuenta("")).isInstanceOf(IllegalArgumentException.class).hasMessageContaining("vacío");
     }
 }
