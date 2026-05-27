@@ -23,4 +23,5 @@ public class SucursalNoEncontradaExceptionTest {
             throw new SucursalNoEncontradaException("error");
         }).isInstanceOf(SucursalNoEncontradaException.class).hasMessageContaining("error");
     }
+
 }
