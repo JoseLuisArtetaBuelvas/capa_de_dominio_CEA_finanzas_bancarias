@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 public class SucursalNoEncontradaExceptionTest {
 
     @Test
-    void debeCrearExepcionConMensaje() {
+    void debeCrearExcepcionConMensaje() {
         var excepcion = new SucursalNoEncontradaException("Sucursal no encontrada");
         assertThat(excepcion.getMessage()).isEqualTo("Sucursal no encontrada");
     }
@@ -18,7 +18,7 @@ public class SucursalNoEncontradaExceptionTest {
     }
 
     @Test
-    void debeRealizarseEnContexto(){
+    void debeLanzarseEnContextoCorrecto(){
         assertThatThrownBy(() -> {
             throw new SucursalNoEncontradaException("error");
         }).isInstanceOf(SucursalNoEncontradaException.class).hasMessageContaining("error");
