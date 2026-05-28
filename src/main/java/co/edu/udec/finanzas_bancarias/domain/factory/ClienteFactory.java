@@ -29,7 +29,6 @@ public class ClienteFactory {
             throw new IllegalArgumentException("El código del cliente no puede ser nulo");
         if (sucursal == null)
             throw new SucursalNoEncontradaException("La sucursal no existe");
-
         return new Empleado(codigoCliente, nombre, direccion, dni, fechaNacimiento, sexo, sucursal);
     }
 }
