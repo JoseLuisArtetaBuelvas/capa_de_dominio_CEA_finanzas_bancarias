@@ -1,5 +1,4 @@
 package co.edu.udec.finanzas_bancarias.domain.factory;
-import co.edu.udec.finanzas_bancarias.domain.model.Cliente;
 import co.edu.udec.finanzas_bancarias.domain.model.Persona;
 import co.edu.udec.finanzas_bancarias.domain.model.Organizacion;
 import co.edu.udec.finanzas_bancarias.domain.enums.Sexo;
@@ -25,10 +24,7 @@ public class ClienteFactory {
                 tipoOrganizacion, representante, cantidadEmpleados);
     }
 
-    public static Empleado crearEmpleado(CodigoCliente codigoCliente, String nombre,
-                                         Direccion direccion, Dni dni,
-                                         LocalDate fechaNacimiento, Sexo sexo,
-                                         Sucursal sucursal) {
+    public static Empleado crearEmpleado(CodigoCliente codigoCliente, String nombre, Direccion direccion, Dni dni, LocalDate fechaNacimiento, Sexo sexo, Sucursal sucursal) {
         if (codigoCliente == null)
             throw new IllegalArgumentException("El código del cliente no puede ser nulo");
         if (sucursal == null)
