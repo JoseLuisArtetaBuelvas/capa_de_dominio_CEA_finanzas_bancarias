@@ -12,18 +12,20 @@ public class CuentaAhorro extends Cuenta {
 
     public CuentaAhorro(CCC ccc, Sucursal sucursal, Cliente cliente, NumeroCuenta numeroCuenta, TipoCuenta tipoCuenta, Saldo saldo, LocalDate fechaApertura, LocalDate fechaCierre, String tipoAmortizacion) {
         super(ccc, sucursal, cliente, numeroCuenta, tipoCuenta, saldo, fechaApertura, fechaCierre);
-        if(tipoAmortizacion==null){
+        if (tipoAmortizacion == null) {
             throw new IllegalArgumentException("El tipo de amortizacion no puede ser nulo");
         }
         this.tipoAmortizacion = tipoAmortizacion;
     }
 
-    public void actualizarTipoAmortizacion(String tipoAmortizacion){
-        if(tipoAmortizacion==null){
+    public void actualizarTipoAmortizacion(String tipoAmortizacion) {
+        if (tipoAmortizacion == null) {
             throw new IllegalArgumentException("El tipo de amortizacion no puede ser nulo");
         }
         this.tipoAmortizacion = tipoAmortizacion;
     }
 
-    public String getTipoAmortizacion() {return tipoAmortizacion;}
+    public String getTipoAmortizacion() {
+        return tipoAmortizacion;
+    }
 }
