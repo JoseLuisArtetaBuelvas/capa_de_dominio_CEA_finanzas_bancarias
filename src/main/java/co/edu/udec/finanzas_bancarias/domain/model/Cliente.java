@@ -14,7 +14,7 @@ public class Cliente {
         }else if(direccion == null){
             throw new IllegalArgumentException("La dirección es obligatoria");
         }else  if(id_cliente == null){
-            throw new IllegalArgumentException("El codigo de cliente es obligatorio");
+            throw new IllegalArgumentException("El código de cliente es obligatorio");
         }
         this.id_cliente = id_cliente;
         this.nombre = nombre;
