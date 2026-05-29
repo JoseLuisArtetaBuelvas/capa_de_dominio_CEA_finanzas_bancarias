@@ -18,6 +18,6 @@ public class TipoCuentaTest {
 
     @Test
     public void debeFallarConValorInexistente(){
-        assertThatThrownBy(()->TipoCuenta.valueOf(null)).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(()->TipoCuenta.valueOf("Inventado")).isInstanceOf(IllegalArgumentException.class);
     }
 }
