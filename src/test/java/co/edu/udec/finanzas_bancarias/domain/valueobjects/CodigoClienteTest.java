@@ -11,11 +11,11 @@ public class CodigoClienteTest {
 
     @Test
     public void debeFallarConValorNulo(){
-        assertThatThrownBy(()-> new CodigoCliente(null)).isInstanceOf(IllegalArgumentException.class).hasMessageContaining("nulo");
+        assertThatThrownBy(()-> new CodigoCliente(null)).isInstanceOf(IllegalArgumentException.class).hasMessageContaining("código");
     }
 
     @Test
     public void debeFallarConValorVacío(){
-        assertThatThrownBy(() -> new CodigoCliente("")).isInstanceOf(IllegalArgumentException.class).hasMessageContaining("vacío");
+        assertThatThrownBy(() -> new CodigoCliente("")).isInstanceOf(IllegalArgumentException.class).hasMessageContaining("código");
     }
 }
