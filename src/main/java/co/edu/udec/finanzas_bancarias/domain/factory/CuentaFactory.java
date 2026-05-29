@@ -12,8 +12,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class CuentaFactory {
-    public static Cuenta crear(CCC ccc, Sucursal sucursal, Cliente cliente,
-                               NumeroCuenta numeroCuenta, TipoCuenta tipoCuenta) {
+    public static Cuenta crear(CCC ccc, Sucursal sucursal, Cliente cliente, NumeroCuenta numeroCuenta, TipoCuenta tipoCuenta) {
         if (sucursal == null)
             throw new SucursalNoEncontradaException("La sucursal no existe");
         if (cliente == null)
